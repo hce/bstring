@@ -22,7 +22,6 @@ int main(int argc, char** argv)
             string_init(&args, j, k);
             for (i = 0; i < 100; i++) {
                 string_concat(&args, "test");
-string_putc(&args, "X");
             }
             printf("100x test == %d len, %d size, %d grow\n", args._u._s.length,
                     args._u._s.size, args._u._s.growby);
