@@ -1,0 +1,23 @@
+.TH STRING_CLEAR 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_clear - empty a string
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "void string_clear(struct string* " string ");
+.sp
+.SH DESCRIPTION
+The
+.BR string_clear()
+function truncates the string to a length of zero. It can subsequently
+be refilled by using
+.BR string_concatb()
+and friends.
+.SH NOTES
+The internal buffer is not freed by this call, nor shrunk to the
+minimum size. Have a look at
+.BR string_free()
+if you need the memory to be freed.
+.SH SEE ALSO
+.BR string_free (3)

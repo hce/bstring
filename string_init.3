@@ -1,0 +1,21 @@
+.TH STRING_INIT 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_init - initialize a bstring
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "void string_init(struct string* " string ", uintptr_t " size ", uintptr_t " growby ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_init()
+function initializes a bstring, allocating \fBsize\fP bytes of memory
+to it and setting the factor by which the buffer size is increased if
+more room is needed.
+.PP
+The memory allocation performed by
+.BR string_init()
+may silently fail, in which case the behavoir of this function is
+equivalent to that of
+.BR string_lazyinit()

@@ -1,0 +1,25 @@
+.TH STRING_PUTC 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_putc - append one character to a bstring
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_putc(struct string* " string ", char " c ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_putc()
+is equivalent to a call to
+.BR string_concatb()
+with a string of the length of one, only a little faster.
+.SH NOTES
+This call may fail if not enough memory is available; refer to
+.BR string_concatb
+for details.
+.SH RETURN VALUE
+.BR string_concat()
+returns 0 on success, otherwise a nonzero value.
+.SH SEE ALSO
+.BR string_init (3)
+.BR string_concatb (3)

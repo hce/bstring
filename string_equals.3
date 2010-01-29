@@ -1,0 +1,16 @@
+.TH STRING_EQUALS 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_equals - check if two strings are equal
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_equals(struct string* " a ", struct string* " b ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_equals()
+checks if \fBa\fP and \fBb\fP are equal.
+.SH RETURN VALUE
+.BR string_equals()
+returns zero if the strings are equal, otherwise nonzero.

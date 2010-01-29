@@ -1,0 +1,17 @@
+.TH STRING_MOVE 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_move - move the content of a bstring to another bstring, freeing the source bstring
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "void string_move(struct string* " source ", struct string* " destination ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_move()
+function moves the contents of \fBsource\fP to \fBdestination\fP.
+\fBdestination\fP should be a non-initialized bstring, or a used one
+previously freed by a call to \fBstring_free()\fP.
+.PP
+\fBsource\fP is freed, but can be re-used without reinitializing it.

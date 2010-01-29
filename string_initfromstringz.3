@@ -1,0 +1,25 @@
+.TH STRING_INITFROMSTRINGZ 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_initfromstringz - initialize a bstring from a zero-terminated string
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_initfromstringz(struct string* " string ", const char const* " sz ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_initfromstringz()
+function initializes a bstring and copies the contents of \fBsz\fP
+into it, till the terminating zero is found. Unlike the other
+initialization functions, this function can fail.
+.SH NOTES
+The bstring initialized by
+.BR string_initfromstringz()
+should be used readonly, because the \fBgrowby\fP value will be set to
+an inefficient value. The reason this function exists is mainly to
+provide a wrapper for functions requiring a bstring as parameter when
+you only got a stringz.
+.SH RETURN VALUE
+.BR string_initfromstringz()
+returns zero on success, otherwise nonzero.

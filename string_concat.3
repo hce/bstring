@@ -1,0 +1,23 @@
+.TH STRING_CONCAT 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_concat - append a zero-terminated string to a bstring
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_concat(string* " string ", const char* " src ");
+.sp
+.SH DESCRIPTION
+The
+.BR string_concat()
+appends the zero-terminated string pointed at by src to \fBstring\fP.
+.SH NOTES
+This call may fail if not enough memory is available; refer to
+.BR string_concatb
+for details.
+.SH RETURN VALUE
+.BR string_concat()
+returns 0 on success, otherwise a nonzero value.
+.SH SEE ALSO
+.BR string_init (3)
+.BR string_concatb (3)

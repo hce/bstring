@@ -1,0 +1,22 @@
+.TH STRING_LAZYINIT 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_lazyinit - initialize a bstring, not allocating any initial buffer
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "void string_lazyinit(struct string* " string ", uintptr_t " growby ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_lazyinit()
+function initializes a bstring, without allocating a buffer to store
+the actual string into. The buffer will be initialized when needed by
+a call to a \fBstring_concat\fP function.
+.SH NOTES
+Calling
+.BR string_free()
+on bstrings initialized with the
+.BR string_lazyinit()
+function is always legal; however, it is only required if the bstring
+was ever used with a \fBstring_concat\fP function.

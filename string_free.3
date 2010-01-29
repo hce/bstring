@@ -1,0 +1,21 @@
+.TH STRING_FREE 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_free - free a bstring previously initialized by string_init
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "void string_free(struct string* " string ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_free()
+frees the internal buffer used to store the actual string. This
+function should be used when a string initialized by
+.BR string_init()
+is no longer needed. Strings freed by
+.BR string_free()
+can be reused without reinitializing them first. If they are reused,
+they need to be freed by a subsequent call to
+.BR string_free()
+.

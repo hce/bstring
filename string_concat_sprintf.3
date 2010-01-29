@@ -1,0 +1,29 @@
+.TH STRING_CONCAT_SPRINTF 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_concat_sprintf - append a formatted string to a string
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_concat_sprintf(string* " string ", const char* " fmt ", "... ");
+.sp
+.SH DESCRIPTION
+The
+.BR string_concat_sprintf()
+is the bstring equivalent to libc's \fBsnprintf\fP. Refer to the
+documentation of libc's printf family for details.
+.PP
+In addition to printf's format strings,
+.BR string_concat_sprintf()
+adds a new conversion specifier: \fB%S\fP, which takes a \fBstruct
+string*\fP instead of a \fBchar*\fP.
+.SH NOTES
+This call may fail if not enough memory is available; refer to
+.BR string_concatb
+for details.
+.SH RETURN VALUE
+.BR string_concat_sprintf()
+returns 0 on success, otherwise a nonzero value.
+.SH SEE ALSO
+.BR string_init (3)
+.BR string_concatb (3)

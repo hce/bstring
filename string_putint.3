@@ -1,0 +1,25 @@
+.TH STRING_PUTINT 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_putint - append an integer to a bstring
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "int string_putint(struct string* " string ", int " i ")
+.sp
+.SH DESCRIPTION
+The
+.BR string_putint()
+converts \fBi\fP into a string and appends it to \fBstring\fP.
+.SH NOTES
+This call may fail if not enough memory is available; refer to
+.BR string_concatb
+for details.
+.SH RETURN VALUE
+.BR string_concat()
+returns 0 on success, otherwise a nonzero value.
+.SH BUGS
+Implementation of this function is ugly and needs to be redone.
+.SH SEE ALSO
+.BR string_init (3)
+.BR string_concatb (3)

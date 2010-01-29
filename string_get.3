@@ -1,0 +1,17 @@
+.TH STRING_GET 3  2008-10-28 "http://github.com/hce/bstring" "bstring user's manual"
+.SH NAME
+string_get - get a pointer to the internal string buffer
+.SH SYNOPSIS
+.nf
+.B #include <bstring.h>
+.sp
+.BI "char* string_get()
+.sp
+.SH DESCRIPTION
+The
+.BR string_get()
+function returns a pointer to the internal string buffer used by the
+bstring library. In normal situations, the buffer should not be
+modified by non \fBstring_\fP-functions.
+.SH SEE ALSO
+.BR string_length()
