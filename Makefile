@@ -6,7 +6,7 @@ LIB=-lcurl -lcrypto
 LEX=flex
 YACC=yacc
 
-SRC=string_clear.c string_concatb.c string_concat_sprintf.c string_putc.c string_putint.c string_concat.c string_free.c string_get.c string_init.c
+SRC=string_clear.c string_concatb.c string_concat.c string_concat_sprintf.c string_equals.c string_free.c string_get.c string_init.c string_initfromstringz.c string_lazyinit.c string_move.c string_putc.c string_putint.c
 OBJ=$(patsubst %.c,%.o,$(SRC))
 
 NAME = bstring
