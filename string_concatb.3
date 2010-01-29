@@ -12,12 +12,15 @@ The
 .BR string_concatb()
 adds \fBlen\fP bytes at \fBsrc\fP to \fBstring\fP.
 .SH NOTES
-If \fBlen\fP bytes to not fit into the internal buffer, that buffer is
+If \fBlen\fP bytes do not fit into the internal buffer, that buffer is
 resized by a multiple of the \fBgrow\fP value specified at string
 creation.
 .PP
-Since memory allocation can fail, a call to string_concatb can fail;
-thus, you have to check the return value to see if it succeeded.
+Since memory allocation can fail, a call to
+.BR string_concatb()
+can fail;
+in that case, \fBstring\fP is still valid and in the state it was in
+before the call to \fBstring_concatb()\fP.
 .SH RETURN VALUE
 .BR string_concatb()
 returns 0 on success, otherwise a nonzero value.
