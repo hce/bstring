@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "string.h"
+#include "bstring.h"
 
 int main(int argc, char** argv)
 {
