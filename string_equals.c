@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "string.h"
+#include "bstring.h"
 
 /**
  * checks if two strings are equal.

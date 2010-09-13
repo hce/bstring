@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "string.h"
+#include "bstring.h"
 
 /**
  * Moves a string from one struct string to another. The old struct

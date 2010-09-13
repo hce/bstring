@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "string.h"
+#include "bstring.h"
 
 #define STRING_CFS_SIZE 32
 

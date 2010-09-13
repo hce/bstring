@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "string.h"
+#include "bstring.h"
 
 int
 string_init(struct string* s, uintptr_t size, uintptr_t growby)

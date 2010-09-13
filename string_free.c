@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "string.h"
+#include "bstring.h"
 
 void
 string_free(struct string* s) {

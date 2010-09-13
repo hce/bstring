@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "string.h"
+#include "bstring.h"
 
 int
 string_initfromstringz(struct string* s, const char const* is)

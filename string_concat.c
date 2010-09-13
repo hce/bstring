@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "string.h"
+#include "bstring.h"
 
 int
 string_concat(struct string* s, const char* sta)

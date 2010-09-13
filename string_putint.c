@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "string.h"
+#include "bstring.h"
 
 #define MAXSTRINGLEN 32
 
