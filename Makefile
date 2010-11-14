@@ -2,7 +2,7 @@ CC=gcc
 INCLUDES=-I/usr/local/include
 LIBDIRS=-L/usr/local/lib
 CFLAGS=-std=c99 -D_POSIX_C_SOURCE=2 -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -Wall -g $(INCLUDES)
-LIB=-lcurl -lcrypto
+LIB=
 LEX=flex
 YACC=yacc
 
